@@ -1,0 +1,83 @@
+<template name="cronometro2">
+
+        <div class="box">
+         
+         
+                    <nav class="cd-stretchy-nav d add-content nav-is-visible" >
+                        <a class="cd-nav-trigger t g boton-play" id="tour-10"  style=" margin-top: 0;">
+                            <i class="glyphicon glyphicon-play" style="top: 30%; left: 34%; font-size: 22px;" aria-hidden="true"></i>
+                        </a>
+
+                        <ul>
+                            <li><a href="#0" class="c hora-crono" style="width: 130px; font-size: 20px; padding-top: 5px; font-weight: bold; font-family: 'Open Sans', sans-serif; ">00h 00m</a></li>
+                            <li><a href="#"><i></i></a></li>
+                            <li><a href="#0" class="c boton-resetear"><i class="fa fa-history" aria-hidden="true"></i></a></li>
+                            <li><a href="#0" class="c boton-agregar-hora" style="padding-left: 1px"><i class="fa fa-cloud" aria-hidden="true"></i></a></li>
+                        </ul>
+
+                        <span aria-hidden="true" class="stretchy-nav-bg"></span>
+                    </nav>
+         
+   
+        </div>
+
+    
+
+</template>
+
+<template name="agregarHoras">
+    <div class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body" style="padding: 0px; background-color: #F2F2F2;">
+                    <form class="">
+                        <div class="modal-formulario">
+                            <div class="contenido-formulario">
+                                <div class="cuadro-datos-asunto">
+                                    <h1 class="color-bunqr">Agregar trabajo</h1>
+                                    <hr>
+                                    <div class="formulario-bunqr">
+
+                                        <div class="medio-ancho descripcion-tarea">
+                                            <label for="asunto">Descripción*</label>
+                                            <input type="text" name="descripcion">
+                                        </div>
+                                        <div class="medio-ancho">
+                                            <label for="fecha">Fecha</label>
+                                                <input class="company" type="text" name="fecha" id="datepicker" readonly >
+                                        </div>
+                                        <div class="medio-ancho">
+                                            <label for="asunto">Asunto*</label>
+                                            <select class="budget asunto" name="asunto">
+                                                {{#each asunto}}
+                                                <option value="{{_id}}">{{caratula}} - {{cliente.nombre}}</option>
+                                                {{/each}}
+                                            </select>
+                                        </div>
+                                        <div class="medio-ancho">
+                                            <label class="cd-label" for="cd-company">Tiempo horas</label>
+                                            <input  type="number" step="1" min="0" value="0" name="horas">
+                                        </div>
+                                        <div class="medio-ancho">
+                                                <label class="cd-label" for="cd-company">Tiempo minutos</label>
+                                                <input type="number" step="1" min="0" value="0" name="minutos">
+                                        </div>
+                                        <div class="medio-ancho">
+                                            <div class="fh-checkbox">
+                                                <input class="cobrado" style="opacity:100" id="no-cobrable" type="checkbox" name="" >
+                                                <label class="cd-label" for="no-cobrable">No es cobrable</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cuadro-datos-asunto" style="height: 100px; width: 76.5%; position: relative; left: 208px; background-color: white; height: 75px; border-top: 2px solid #F2F2F2;">
+                                <input class="agregar-trabajo" type="button" value="Agregar trabajo">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
